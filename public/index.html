@@ -1,11 +1,22 @@
 <html>
   <head>
-    <title>Registro de partes</title>
+    <title>Projecto Backend</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
   <body>
-    <h1>Registro de partes que componen un termotanque.</h1>
-    <p>Ir a ruta de <a href="http://localhost:3000/partes">partes</a></p>
+    <h1>Projecto Backend: <span>REGISTRO DE MATERIALES</span></h1>
+
+    <p>Modelo para agregar un item:</p>
+    <code>{ name: String, model: String, code: String }</code>
+
+    <ul>
+      <li><span>GET /parts</span> Lista completa</li>
+      <li><span>GET /parts/id</span> Item según ID</li>
+      <li><span>POST /parts</span> Agrega un item</li>
+      <li><span>UPDATE /parts/id</span> Modifica un item</li>
+      <li><span>DELETE /parts/id</span> Elimina un item</li>
+      <li><span>GET /luke</span> API externa info sobre Luke Skywalker</li>
+    </ul>
   </body>
 </html>

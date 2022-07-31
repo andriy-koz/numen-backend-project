@@ -2,13 +2,21 @@ const { validationResult } = require('express-validator');
 const Part = require('../models/partsModel');
 
 exports.getPartsList = async (_, res) => {
-  const partsList = await Part.find({});
-  res.json({ list: partsList });
+  try {
+    const partsList = await Part.find({});
+    res.json({ list: partsList });
+  } catch (error) {
+    res.status(409).json({ message: error });
+  }
 };
 
 exports.getPart = async (req, res) => {
-  const part = await Part.findById(req.params.id);
-  res.json({ part });
+  try {
+    const part = await Part.findById(req.params.id);
+    res.json({ part });
+  } catch (error) {
+    res.status(409).json({ message: error });
+  }
 };
 
 exports.addPart = async (req, res) => {
@@ -36,6 +44,10 @@ exports.updatePart = async (req, res) => {
 };
 
 exports.deletePart = async (req, res) => {
-  const part = await Part.findByIdAndDelete(req.params.id);
-  res.json(part);
+  try {
+    const part = await Part.findByIdAndDelete(req.params.id);
+    res.json(part);
+  } catch (error) {
+    res.status(409).json({ message: error });
+  }
 };

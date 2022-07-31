@@ -1,8 +1,44 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+code {
+  font-size: 18px;
+}
+
+h1 span {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.1px;
+  font-style: italic;
+  color: darkgreen;
+}
+
+ul {
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+li {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+li span {
+  min-width: 150px;
+  color: darkgreen;
 }

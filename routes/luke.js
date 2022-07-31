@@ -1,9 +1,8 @@
 const express = require('express');
+const { lukeController } = require('../controllers/luke');
 
 const router = express.Router();
 
-router.get('/', (_, res) => {
-  res.json({ message: 'Registro de piezas' });
-});
+router.get('/', lukeController);
 
 module.exports = router;

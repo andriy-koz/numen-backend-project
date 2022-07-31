@@ -14,7 +14,6 @@ const partSchema = new Schema({
     required: true,
     type: String,
   },
-  amount: Number,
 });
 
 const Part = model('Part', partSchema);

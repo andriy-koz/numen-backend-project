@@ -6,6 +6,7 @@ const dbConnection = require('./db');
 
 const indexRouter = require('./routes/index');
 const partsRouter = require('./routes/parts');
+const lukeRouter = require('./routes/luke');
 
 require('dotenv').config();
 
@@ -21,5 +22,6 @@ dbConnection();
 
 app.use('/', indexRouter);
 app.use('/parts', partsRouter);
+app.use('/luke', lukeRouter);
 
 module.exports = app;
